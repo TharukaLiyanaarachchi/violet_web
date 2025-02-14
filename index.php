@@ -93,21 +93,22 @@ $ip = getIPAddress();
 </nav>
 <!--second child -->
 <div class="bg-secondary p-2">
-    <p class="text-start">Welcome Guest / <a href="#">Login</a></p>
+    <p class="text-start">Welcome Guest / <a href="#">Login</a> <span class="ml-2"><?php echo 'IP Address: '.$ip; ?></span></p>
 </div>
 
 <!--third child -->
-<div class="bg-light">
+
+
+<!--fourth child -->
+<div class="row">
+    <!-- <div class="col-md-1"></div> -->
+    <div class="col-md-12 pr-5 pl-5">
+    <div class="bg-light">
     <h3 class="text-center">Promotion</h3>
     <p class="text-center">Experience savings like never before with up to 70% off on our exclusive collection! Indulge in stylish outfits at jaw-dropping prices. Whether it’s classy dresses, trendy tops, or essential basics, these deals won’t last long. Hurry and grab your favorites before they’re gone for good!
 
 </p>
 </div>
-
-
-<!--fourth child -->
-<div class="row">
-    <div class="col-md-12">
     <!--products -->
 <div class="row">
     <div class="col-md-4 mb-2">
@@ -164,19 +165,8 @@ $ip = getIPAddress();
     <a href="#" class="btn btn-secondary">View more</a>
   </div>
   </div>
-  
-   <!-- <div class="col-md-4 mb-2">
-    <div class="card">
-  <img class="card-img-top" src="./images/women.png" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">Women</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Add to Cart</a>
-    <a href="#" class="btn btn-secondary">View more</a>
   </div>
-</div>
-    </div> -->
-  <!--  <div class="col-md-4 mb-2">
+   <div class="col-md-4 mb-2">
     <div class="card">
   <img class="card-img-top" src="./images/women.png" alt="Card image cap">
   <div class="card-body">
@@ -187,6 +177,30 @@ $ip = getIPAddress();
   </div>
 </div>
     </div>
+  <div class="col-md-4 mb-2">
+    <div class="card">
+  <img class="card-img-top" src="./images/women.png" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Women</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Add to Cart</a>
+    <a href="#" class="btn btn-secondary">View more</a>
+  </div>
+</div>
+    </div>
+
+    <div class="col-md-4 mb-2">
+    <div class="card">
+  <img class="card-img-top" src="./images/women.png" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Women</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Add to Cart</a>
+    <a href="#" class="btn btn-secondary">View more</a>
+  </div>
+</div>
+    </div>
+
     <div class="col-md-4 mb-2">
     <div class="card">
   <img class="card-img-top" src="./images/women.png" alt="Card image cap">
@@ -209,32 +223,10 @@ $ip = getIPAddress();
   </div>
 </div>
     </div>
-    <div class="col-md-4 mb-2">
-    <div class="card">
-  <img class="card-img-top" src="./images/women.png" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">Women</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Add to Cart</a>
-    <a href="#" class="btn btn-secondary">View more</a>
-  </div>
-</div>
-    </div>
-    <div class="col-md-4 mb-2">
-    <div class="card">
-  <img class="card-img-top" src="./images/women.png" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">Women</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Add to Cart</a>
-    <a href="#" class="btn btn-secondary">View more</a>
-  </div>
-</div>
-    </div> -->
 
 
 </div>
-
+<!-- <div class="col-md-1"></div> -->
 </div>
         <!--iterms under to display -->
     </div>
@@ -264,8 +256,6 @@ $ip = getIPAddress();
 <!--last child -->
 <div class="bg-info p-3 text-center">
     <p>All right reserved © Designed by Tharuka 2025</p>
-    <br/>
-    <?php echo 'User Real IP Address - '.$ip; ?>
 </div>
 
     
