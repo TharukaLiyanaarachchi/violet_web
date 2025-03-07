@@ -21,39 +21,30 @@
     <!--start header -->
     <?php include 'includes/header.php' ?>
     <!--end header -->
-    <div class="row">
+    <div class="row mb-5">
         <div class="col-md-12 pr-5 pl-5">
-                <h2 class="mb-4">Shopping Cart</h2>
-                <table class="table table-bordered">
-                    <thead>
-                    <tr>
-                        <th>Product</th>
-                        <th>Price</th>
-                        <th>Quantity</th>
-                        <th>Total</th>
-                        <th>Action</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>Balloon Sleeve Smoked Mini Dress - 080324</td>
-                        <td>Rs.8000.00</td>
-                        <td>1</td>
-                        <td>Rs.8000.00</td>
-                        <td><button class="btn btn-danger btn-sm">Remove</button></td>
-                    </tr>
-                    <tr>
-                        <td>Collared Maxi Dress - 171123</td>
-                        <td>Rs.9500.00</td>
-                        <td>2</td>
-                        <td>Rs.19000.00</td>
-                        <td><button class="btn btn-danger btn-sm">Remove</button></td>
-                    </tr>
-                    </tbody>
-                </table>
-                <h4>Total: Rs.27000.00</h4>
-                <a href="index.php" class="btn btn-primary">Continue Shopping</a>
-                <a href="checkout.php" class="btn btn-success">Checkout</a>
+            <form>
+                <div class="form-group row">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label"><b>Contact Us</b></label>
+                    <div class="col-sm-10">
+                        <p>Velvet Vouge online For any inquiries, please send us a message and we will reply to you as soon as possible. We would like to remind you that you should not send or provide your card details via e-mail or social networks.</p>
+                        <p>MONDAY - SATURDAY</p>
+                        <p>09:00 - 18:00</p>
+                        <p>PHONE</p>
+                        <p>0117 447 447</p>
+                        <p>ADDRESS</p>
+                        <p>No 415, High Level Rd, Delkanda, Nugegoda.</p>
+                        <p>EMAIL</p>
+                        <p>online@velvetvouge.lk</p></p>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputPassword3" class="col-sm-2 col-form-label"><b>Frequently Ask Questions</b></label>
+                    <div class="col-sm-10">
+                    <textarea rows="5" cols="100"></textarea>
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
     <!--start footer -->

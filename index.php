@@ -18,6 +18,17 @@ $ip = getIPAddress();
 
     <!--css file -->
     <link rel="stylesheet" href="style.css">
+    <style>
+        #menCard, #womenCard, #accessCard {
+            cursor: pointer; /* Makes the card behave like a button */
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        #menCard:hover, #womenCard:hover, #accessCard:hover {
+            transform: scale(1.05); /* Slight zoom effect */
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Adds shadow */
+        }
+    </style>
 </head>
 <body>
 <div class="container-fluid p-0">
@@ -25,26 +36,58 @@ $ip = getIPAddress();
     <?php include 'includes/header.php' ?>
     <!--end header -->
     <!--second child -->
-    <div class="bg-secondary p-2">
-        <p class="text-start">Welcome Guest / <a href="#">Login</a> <span
-                    class="ml-2"><?php echo 'IP Address: ' . $ip; ?></span></p>
-    </div>
+<!--    <div class="bg-secondary p-2">-->
+<!--        <p class="text-start">Welcome Guest / <a href="#">Login</a> <span-->
+<!--                    class="ml-2">--><?php //echo 'IP Address: ' . $ip; ?><!--</span></p>-->
+<!--    </div>-->
 
     <!--third child -->
+    <div class="row">
+        <div class="col-md-12 pr-5 pl-5">
+            <!-- Promotion Banner -->
+            <div class="alert alert-primary text-center" role="alert">
+                🎉 Limited-Time Offer! Get 50% off on all products. <a href="offers.php" class="alert-link">Check Now</a>
+                🎊
+            </div>
 
+            <!-- Image Slider (Carousel) -->
+            <div id="carouselExample" class="carousel slide " data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./images/side2.png" class="d-block w-100" alt="Slide 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./images/side2.png" class="d-block w-100" alt="Slide 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./images/side2.png" class="d-block w-100" alt="Slide 3">
+                    </div>
+                </div>
+<!--                 Controls -->
+<!--                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"-->
+<!--                        data-bs-slide="prev">-->
+<!--                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>-->
+<!--                    <span class="visually-hidden">Previous</span>-->
+<!--                </button>-->
+<!--                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"-->
+<!--                        data-bs-slide="next">-->
+<!--                    <span class="carousel-control-next-icon" aria-hidden="true"></span>-->
+<!--                    <span class="visually-hidden">Next</span>-->
+<!--                </button>-->
+            </div>
 
+            <div class="mt-5">
+                <h1>Welcome to Our Website</h1>
+                <p>Explore our latest deals and offers.</p>
+            </div>
+        </div>
+    </div>
     <!--fourth child -->
     <div class="row">
         <div class="col-md-12 pr-5 pl-5">
             <!--start promotion tag-->
             <div class="bg-light">
-                <h3 class="text-center">Promotion</h3>
-                <p class="text-center">Experience savings like never before with up to 70% off on our exclusive
-                    collection! Indulge in stylish outfits at jaw-dropping prices. Whether it’s classy dresses, trendy
-                    tops, or essential basics, these deals won’t last long. Hurry and grab your favorites before they’re
-                    gone for good!
-
-                </p>
+                <h3 class="text-left">New Arrivals</h3>
             </div>
             <!--end promotion tag-->
             <!--start promotion products -->
@@ -85,84 +128,31 @@ $ip = getIPAddress();
             </div>
 
 
-            <div class="bg-light">
-                <h3 class="text-center">Products</h3>
-                <p class="text-center">Free delivery for local orders over LKR 5500/=
-                </p>
+            <div class="bg-light mt-3">
+                <h3 class="text-left">Products Category</h3>
             </div>
-
-
             <div class="row">
                 <div class="col-md-4 mb-2">
-                    <div class="card">
-                        <img class="card-img-top" src="./images/P1.png" alt="Card image cap">
+                    <div class="card" id="menCard" onclick="window.location.href='products.php?category=1&item=1'">
+                        <img class="card-img-top" src="./images/women.png" alt="Card image cap">
                         <div class="card-body">
-                            <h5 class="card-title">V-Neck Long Sleeve Top - 030225</h5>
-                            <p class="card-text"> VVO22921-UK6-DarkGreen.</p>
-                            <a href="#" class="btn btn-primary">Add to Cart</a>
-                            <a href="#" class="btn btn-secondary">View more</a>
+                            <h5 class="card-title">Women</h5>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 mb-2">
-                    <div class="card">
-                        <img class="card-img-top" src="./images/women.png" alt="Card image cap">
+                    <div class="card" id="womenCard" style="mouse" onclick="window.location.href='products.php?category=1&item=1'">
+                        <img class="card-img-top" src="./images/men.png" alt="Card image cap">
                         <div class="card-body">
-                            <h5 class="card-title">Women</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Add to Cart</a>
-                            <a href="#" class="btn btn-secondary">View more</a>
+                            <h5 class="card-title">Men</h5>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 mb-2">
-                    <div class="card">
-                        <img class="card-img-top" src="./images/women.png" alt="Card image cap">
+                    <div class="card" id="accessCard" onclick="window.location.href='products.php?category=1&item=1'">
+                        <img class="card-img-top" src="./images/acc.png" alt="Card image cap">
                         <div class="card-body">
-                            <h5 class="card-title">Women</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Add to Cart</a>
-                            <a href="#" class="btn btn-secondary">View more</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 mb-2">
-                    <div class="card">
-                        <img class="card-img-top" src="./images/women.png" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Women</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Add to Cart</a>
-                            <a href="#" class="btn btn-secondary">View more</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 mb-2">
-                    <div class="card">
-                        <img class="card-img-top" src="./images/women.png" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Women</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Add to Cart</a>
-                            <a href="#" class="btn btn-secondary">View more</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-2">
-                    <div class="card">
-                        <img class="card-img-top" src="./images/women.png" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Women</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Add to Cart</a>
-                            <a href="#" class="btn btn-secondary">View more</a>
+                            <h5 class="card-title">Accessories</h5>
                         </div>
                     </div>
                 </div>

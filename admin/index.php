@@ -4,23 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
-
 <!--bootstrap CSS link -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
 <!--font awesome link -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
 <!--css file -->
 <link rel="stylesheet" href="../style.css">
-
-.footer{
-    position:absolute;
-    bottom:0;
-}
-
-</style>
-
 </head>
 <body>
 <!--navbar -->
@@ -53,16 +42,16 @@
         </div>
 <!--button*10>a.nav-link.text-light.bg-info-my-1 -->
         <div class="button text-center">
-            <button class="my-3"><a href="insert_products.php" class="nav-link text-light bg-info my-1">Insert Prodcuts</a></button>
-            <button><a href="" class="nav-link text-light bg-info my-1">View Products</a></button>
-            <button><a href="index.php? insert_category" class="nav-link text-light bg-info my-1">Insert Categories</a></button>
-            <button><a href="" class="nav-link text-light bg-info my-1">View Catergories</a></button>
-            <button><a href="index.php? insert_item" class="nav-link text-light bg-info my-1">Insert Items</a></button>
+            <button class="my-3"><a href="index.php?dashboard" class="nav-link text-light bg-info my-1">Dashboard</a></button>
+            <button class="my-3"><a href="index.php?insert_product" class="nav-link text-light bg-info my-1">Insert Products</a></button>
+            <button><a href="index.php?view_product" class="nav-link text-light bg-info my-1">View Products</a></button>
+            <button><a href="index.php?insert_category" class="nav-link text-light bg-info my-1">Insert Categories</a></button>
+            <button><a href="" class="nav-link text-light bg-info my-1">View Categories</a></button>
+            <button><a href="index.php?insert_item" class="nav-link text-light bg-info my-1">Insert Items</a></button>
             <button><a href="" class="nav-link text-light bg-info my-1">View Items</a></button>
-            <button><a href="" class="nav-link text-light bg-info my-1">All Orders</a></button>
-            <button><a href="" class="nav-link text-light bg-info my-1">All Payments</a></button>
-            <button><a href="" class="nav-link text-light bg-info my-1">List Users</a></button>
-            <button><a href="" class="nav-link text-light bg-info my-1">Logout</a></button>
+            <button><a href="index.php?all_orders" class="nav-link text-light bg-info my-1">All Orders</a></button>
+            <button><a href="index.php?user_list" class="nav-link text-light bg-info my-1">List Users</a></button>
+            <button><a href="../logout.php" class="nav-link text-light bg-info my-1">Logout</a></button>
         </div>
     </div>
 </div>
@@ -70,12 +59,27 @@
 <!--fourth child -->
 <div class="container my-5">
     <?php
+   if(isset($_GET['dashboard'])){
+    include('dashboard.php');
+   }
    if(isset($_GET['insert_category'])){
     include('insert_categories.php');
    }
    if(isset($_GET['insert_item'])){
     include('insert_items.php');
    }
+    if(isset($_GET['insert_product'])){
+        include('insert_products.php');
+    }
+    if(isset($_GET['view_product'])){
+        include('products_list.php');
+    }
+    if(isset($_GET['all_orders'])){
+        include('order_list.php');
+    }
+    if(isset($_GET['user_list'])){
+        include('user_list.php');
+    }
    ?>
 
 </div>
